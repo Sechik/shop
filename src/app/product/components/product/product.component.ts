@@ -9,12 +9,15 @@ import { ProductModel } from '../../services/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() product: ProductModel;
+  @Input() product!: ProductModel;
+
+  // не надо внедрять зависимость в этот компонент
+  // используйте аутпут
   constructor(private cartService: CartService) {
-    this.product = new ProductModel();
   }
 
   ngOnInit(): void {
+    this.product = new ProductModel();
   }
 
   onBuy(): void {

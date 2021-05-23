@@ -1,5 +1,7 @@
-<p>product-list works!</p>
-<div *ngFor="let product of products">
-  <app-product [product]="product"></app-product>
-</div>
+<app-product-sort (sortByAscendingChanged)="sortByAscendingChanged($event)"
+    (productOptionsChanged)="sortByPropertiesChanged($event)"></app-product-sort>
 
+<div *ngFor="let product of products | orderBy: sortByProperties : sortByAscending">
+  <app-product [product]="product" (addToCart)="onAddToCart($event)"></app-product>
+  <br>
+</div>

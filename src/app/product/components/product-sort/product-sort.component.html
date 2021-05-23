@@ -1,0 +1,7 @@
+<div *ngFor="let option of productOptions;">
+    {{option.name}} <input type="radio" [value]="option.name" name="sort"
+      (change)="onProductOptionsChange(option.name, !option.checked)">
+</div>
+
+Sort by ascending: <input type="checkbox" [checked]="sortByAscending"
+  (change)="onSortByAscendingChange(!sortByAscending)">

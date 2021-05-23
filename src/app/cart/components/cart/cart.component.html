@@ -1,1 +1,13 @@
-<p>cart works!</p>
+<hr>
+<div class="col-md-6">
+  <div></div>
+    <strong>Корзина</strong>
+  <br>
+  <div *ngFor="let product of cartService.getProduct() | async">
+    <app-cart-item [product]="product"></app-cart-item>
+    <br>
+  </div>
+  <br>
+  <div>Сумма: {{cartService.totalSum() | number: '1.1-2'}}</div>
+  <div>Количество: {{cartService.totalQuantity()}}</div>
+</div>

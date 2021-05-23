@@ -1,22 +1,23 @@
+import { OrderByPipe } from './shared/pipes/order-by.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product/components/product-list/product-list.component';
-import { ProductComponent } from './product/components/product/product.component';
-import { CartComponent } from './cart/components/cart/cart.component';
+import { CartModule } from './cart/cart.module';
+import { ProductModule } from './product/product.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule,
+    ProductModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

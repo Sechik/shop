@@ -1,8 +1,8 @@
-<p>product works!</p>
-<div>{{product.name}}</div>
-<div>{{product.description}}</div>
-<div>{{product.price}}</div>
-<div>{{product.isAvailable}}</div>
-<div>{{product.status}}</div>
+<div class="col-md-6">
+  <div>Название: {{product.name}}</div>
+  <div>Описание: {{product.description}}</div>
+  <div>Цена: {{product.price}}</div>
+  <div>Скидка: {{product.status}}</div>
 
-<button (click)="onBuy()">Buy</button>
+  <button class="btn btn-primary" (click)="onAddToCart(product)">Добавить в корзину</button>
+</div>

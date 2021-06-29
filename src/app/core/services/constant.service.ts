@@ -4,9 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConstantService {
-
-  constructor(
-    public app: string = "SechikShop",
-    public ver: string = '1.0') {
-   }
+  app = 'SechikShop';
+  ver = '1.0';
+  // constructor(
+  //   public app: string = 'SechikShop',
+  //   public ver: string = '1.0') {
+  //  }
 }
+//  Тут не надо было создавать класс, так как ангуляр будет искать провайдер в виде строки

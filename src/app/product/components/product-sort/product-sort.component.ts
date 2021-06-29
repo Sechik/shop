@@ -7,9 +7,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ProductSortComponent {
 
-  productOptions: SortElement[] = [{ name: "name", checked: false }, { name: "price", checked: false }];
+  productOptions: SortElement[] = [{ name: 'name', checked: false }, { name: 'price', checked: false }];
 
-  sortByAscending: boolean = true;
+  sortByAscending = true;
 
   @Output() sortByAscendingChanged: EventEmitter<boolean> = new EventEmitter();
   @Output() productOptionsChanged: EventEmitter<string[]> = new EventEmitter();
@@ -17,7 +17,7 @@ export class ProductSortComponent {
   constructor() {
   }
 
-  onProductOptionsChange(key: string, value: boolean) {
+  onProductOptionsChange(key: string, value: boolean): void {
     this.productOptions.find(x => x.name === key)!.checked = value;
     const result: string[] = [];
     this.productOptions.forEach(element => {

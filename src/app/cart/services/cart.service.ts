@@ -10,12 +10,12 @@ export class CartService {
 
   cartProducts: ProductModel[] = [];
 
-  public get isEmptyCart() : boolean {
+  public get isEmptyCart(): boolean {
     return this.cartProducts.length === 0;
   }
 
   addProduct(product: ProductModel, quantity: number = 1): void {
-    this.cartProducts.push({...product, quantity: quantity });
+    this.cartProducts.push({...product, quantity });
   }
 
   totalQuantity(): number {

@@ -21,6 +21,8 @@ export class ProductService {
     return array;
   }
 }
+
+// Я бы вынес в отдельный модуль
 export class ProductModel {
   constructor(
     public name: string = 'Name',
